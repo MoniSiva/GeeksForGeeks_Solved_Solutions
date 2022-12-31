@@ -1,0 +1,17 @@
+//User function Template for Java
+class Solution {
+    static String armstrongNumber(int n){
+        int ams = 0;
+        int value = n;
+        
+        while(value > 0){
+            int mod = value % 10;
+            ams = ams + (mod * mod * mod);
+            value = value / 10;
+        }
+        
+        if(n == ams)
+            return "Yes";
+        return "No";
+    }
+}
