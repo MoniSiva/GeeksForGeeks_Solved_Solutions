@@ -1,0 +1,18 @@
+
+//User function Template for Java
+
+class Solution
+{
+    public String is_palindrome(int n)  {
+        int rev = 0;
+        int val = n;
+        while( n > 0){
+            int mod = n % 10;
+            rev = (rev * 10)+mod;
+            n = n / 10;
+        }
+        if(rev == val)
+            return "Yes";
+        return "No";
+    }
+}
